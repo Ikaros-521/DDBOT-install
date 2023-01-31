@@ -24,7 +24,7 @@ else
     echo "程序版本没有传参，按默认配置运行"
 fi
 
-echo "系统架构=$framework 版本=$version"
+echo "系统架构=$framework， 版本=$version"
 
 # 下载官方bot压缩包 版本为v1.0.9.2
 curl https://gh.ddlc.top/https://github.com/Sora233/DDBOT/releases/download/v$version/DDBOT-v$version-linux-$framework.tar.gz --output DDBOT-v$version-linux-$framework.tar.gz
