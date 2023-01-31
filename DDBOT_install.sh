@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "命令参考：bash DDBOT-install.sh <系统架构，不填默认arm64> <程序版本，不填默认1.0.9.2>"
+echo "命令参考：bash DDBOT-install.sh <系统架构，先会简单检索判断一下，都不匹配默认arm64> <程序版本，不填默认1.0.9.2>"
 
 framework="arm64"
 version="1.0.9.2"
@@ -8,6 +8,14 @@ if [ "$1" ];then
     framework=$1
 else
     echo "系统框架没有传参，按默认配置运行"
+    uname=`uname -m`
+    if [ "$uname" = "aarch64" ];then
+        framework="arm64"
+    elif [ "$uname" = "x86_64" ];then
+        framework="amd64"
+    else
+        framework="arm64"
+    fi
 fi
 
 if [ "$2" ];then
