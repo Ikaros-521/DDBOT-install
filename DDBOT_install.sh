@@ -1,8 +1,8 @@
 #!/bin/bash
-echo "命令参考：bash DDBOT-install.sh <系统架构，先会简单检索判断一下，都不匹配默认arm64> <程序版本，不填默认1.0.9.2>"
+echo "命令参考：bash DDBOT-install.sh <系统架构，先会简单检索判断一下，都不匹配默认arm64> <程序版本，不填默认1.1.0>"
 
 framework="arm64"
-version="1.0.9.2"
+version="1.1.0"
 
 if [ "$1" ];then
     framework=$1
