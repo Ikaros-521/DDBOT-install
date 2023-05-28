@@ -2,7 +2,7 @@
 echo "命令参考：bash DDBOT-install.sh <系统架构，先会简单检索判断一下，都不匹配默认arm64> <程序版本，不填默认1.1.0>"
 
 framework="arm64"
-version="1.1.0"
+version="1.1.1"
 
 if [ "$1" ];then
     framework=$1
@@ -25,7 +25,6 @@ else
 fi
 
 echo "系统架构=$framework， 版本=$version"
-
 # 下载官方bot压缩包 版本为v1.0.9.2
 curl https://gh.ddlc.top/https://github.com/Sora233/DDBOT/releases/download/v$version/DDBOT-v$version-linux-$framework.tar.gz --output DDBOT-v$version-linux-$framework.tar.gz
 # 创建文件夹
